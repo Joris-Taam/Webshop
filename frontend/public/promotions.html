@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/promotions.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+		<title>Acties</title>
+	</head>
+	<body data-api-base="http://localhost:4001/api">
+		<navbar-component></navbar-component>
+
+		<main class="promotions-container">
+			<header class="promotions-header">
+				<h1>Acties</h1>
+				<div class="filter-container">
+					<label for="category-select">Categorie:</label>
+					<select id="category-select">
+						<option value="">Alle Categorieën</option>
+					</select>
+				</div>
+			</header>
+
+			<div id="promotion-products-container" class="promotion-products-grid">
+				<p class="loading-msg">Acties laden...</p>
+			</div>
+		</main>
+
+		<footer-component></footer-component>
+
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/promotions.js" defer></script>
+	</body>
+</html>

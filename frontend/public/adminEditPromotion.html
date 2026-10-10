@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./js/adminEditPromotion.js" type="module"></script>
+		<link rel="stylesheet" href="./css/adminPromotions.css" />
+		<script type="module" src="./js/shared/sidebar.js" defer></script>
+		<link rel="stylesheet" href="./index.css" />
+		<title>Edit Promotion</title>
+	</head>
+	<body>
+		<sidebar-component></sidebar-component>
+		<main>
+			<h2>Edit Promotion</h2>
+			<form id="promotionForm" class="promotion-form">
+				<label for="title">Title</label>
+				<input type="text" id="title" name="title" />
+				<label for="description">Description</label>
+				<input type="text" id="description" name="description" />
+				<label for="percentage">Percentage</label>
+				<input type="number" id="percentage" name="percentage" />
+				<button type="submit" class="btn">Save</button>
+			</form>
+		</main>
+	</body>
+</html>

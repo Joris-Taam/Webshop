@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel="stylesheet" href="./css/contactFormulier.css">
+    <script type="module" src="./js/shared/navbar.js"> </script>
+    <link rel="stylesheet" href="./css/navbar.css">
+	</head>
+	<body>
+		<navbar-component></navbar-component>
+		<main>
+			<section class="container">
+				<form id="contactForm">
+          <input type="text" id="naam" name="naam" required placeholder="Naam">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp" required>
+          <textarea class="message" id="bericht" name="bericht" placeholder="Bericht" required></textarea>
+					<input class="Send" type="submit" value="Versturen" />
+				</form>
+			</section>
+			<aside class="container">
+      <p> Mail: 3dprinters@hva.nl</p> 
+      <p> Locatie: Wibautstraat 3b, <br>
+        Amsterdam, <br> Nederland </p>
+			</aside>
+        
+    
+		</main>
+		<script type="module" src="./js/contactForm.js" defer></script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./css/signup.css" />
+		<script type="module" src="./js/shared/footer.js" defer></script>
+		<script type="module" src="./js/signup.js" defer></script>
+		<title>3Webshop</title>
+	</head>
+	<body>
+		<main>
+			<section class="formSection">
+				<img src="./img/logo.svg" alt="3Webshop logo" />
+				<form>
+					<label id="firstnameSection">
+						Voornaam
+						<input type="text" placeholder="Voornaam" id="firstname" name="firstname" />
+					</label>
+					<fieldset>
+						<label>
+							Tussenvoegsel
+							<input type="text" placeholder="Tussenvoegsel" id="tussenvoegsel" name="tussenvoegsel" />
+						</label>
+						<label id="lastnameSection">
+							Achternaam
+							<input type="text" placeholder="Achternaam" id="lastname" name="lastname" />
+						</label>
+					</fieldset>
+					<section id="loginDetails">
+						<label>
+							Email
+							<input type="email" placeholder="Email" id="email" name="email" />
+						</label>
+						<label>
+							Wachtwoord
+							<input type="password" placeholder="Wachtwoord" id="wachtwoord" name="wachtwoord" />
+						</label>
+						<label>
+							Herhaal Wachtwoord
+							<input
+								type="password"
+								placeholder="Herhaal Wachtwoord"
+								id="herhaalWachtwoord"
+								name="herhaalWachtwoord"
+							/>
+						</label>
+					</section>
+					<section class="buttonSection">
+						<a class="btn secondarybtn" href="/">Terug</a>
+						<button type="submit" class="btn">Aanmelden</button>
+					</section>
+				</form>
+			</section>
+			<section class="sideSection">
+				<img class="illustration" src="./img/signup-illustration.png" alt="Illustration" />
+			</section>
+		</main>
+	</body>
+</html>

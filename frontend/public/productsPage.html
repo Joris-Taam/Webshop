@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Product Details</title>
+		<link rel="stylesheet" href="css/productsPage.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./js/productsPage.js" defer></script>
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+	</head>
+	<body data-api-base="http://localhost:4001/api" data-user-email="test@bugwriters.com">
+		<navbar-component></navbar-component>
+
+		<header>
+			<h1>Product Details</h1>
+		</header>
+
+		<main>
+			<div id="loading-msg" class="status-msg">Product laden...</div>
+
+			<article id="product-detail" class="product-detail-card" style="display: none">
+				<div class="product-visual">
+					<img id="product-img" src="" alt="Product afbeelding" class="main-img" />
+				</div>
+
+				<div class="product-info">
+					<div class="info-header">
+						<span id="product-category-label" class="category-tag">Categorie</span>
+						<h2 id="product-name">Product Naam</h2>
+					</div>
+
+					<p id="product-description" class="description">Beschrijving laden...</p>
+
+					<div class="price-block">
+						<span id="product-price" class="price">€ 0,00</span>
+					</div>
+
+					<div class="actions">
+						<button id="btn-cart" class="btn btn-primary">In Winkelmand</button>
+						<button id="btn-wishlist" class="btn btn-secondary">In Verlanglijst</button>
+					</div>
+
+					<p id="feedback-msg" class="feedback" hidden></p>
+				</div>
+			</article>
+		</main>
+
+		<footer-component></footer-component>
+	</body>
+</html>

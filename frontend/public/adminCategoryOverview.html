@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catogorie overzicht</title>
+    <script type="module" src="./js/shared/sidebar.js" defer></script>
+    <link rel="stylesheet" href="./css/AdminCategoryOverview.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <sidebar-component></sidebar-component>
+    <main>
+        <h2 class="section-title">Categorieën Overzicht</h2>
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th>Naam</th>
+                    <th>Beschrijving</th>
+                    <th>Acties</th>
+                </tr>
+            </thead>
+            <tbody id="categoryTableBody"></tbody>
+        </table>
+        <template id="categoryRowTemplate">
+            <tr>
+                <td class="p-name"></td>
+                <td class="p-beschrijving"></td>
+                <td class="actions">
+                    <button class="edit-btn">Bewerken</button>
+                    <button class="delete-btn">Verwijderen</button>
+                </td>
+            </tr>
+        </template>
+
+    </main>
+    <script type="module" src="./js/adminCategoryOverview.js" defer></script>
+</body>
+
+</html>

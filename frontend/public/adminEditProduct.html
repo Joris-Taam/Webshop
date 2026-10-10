@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Product Bewerken</title>
+	<script type="module" src="./js/shared/sidebar.js" defer></script>
+	<link rel="stylesheet" href="./css/AdminAddProduct.css" />
+	<link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+	<sidebar-component></sidebar-component>
+	<section class="admin-container">
+		<h2 class="section-title">Product Bewerken</h2>
+
+		<form id="productForm" class="product-form" enctype="multipart/form-data" novalidate>
+			<section class="form-group">
+				<label for="name">Product Naam *</label>
+				<input type="text" id="name" required />
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="description">Product Omschrijving *</label>
+				<textarea id="description" rows="4"></textarea>
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="price">Prijs (€) *</label>
+				<input type="number" id="price" min="0.01" step="0.01" required />
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="category">Categorie *</label>
+				<input type="text" id="category" required />
+				<div class="error-message"></div>
+			</section>
+			<section class="form-group">
+				<label for="sizeWidth">Breedte (cm) *</label>
+				<input type="number" id="sizeWidth" min="0" step="0.01" required />
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="sizeHeight">Hoogte (cm) *</label>
+				<input type="number" id="sizeHeight" min="0" step="0.01" required />
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="sizeLength">Lengte (cm) *</label>
+				<input type="number" id="sizeLength" min="0" step="0.01" required />
+				<div class="error-message"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="file">Product Bestand</label>
+				<input type="file" id="file" />
+				<div id="currentFile" style="margin-top: 5px"></div>
+			</section>
+
+			<section class="form-group">
+				<label for="img">Product Afbeelding</label>
+				<input type="file" id="img" />
+				<img id="currentImg" src="" alt="Product Afbeelding"
+					style="max-width: 200px; display: none; margin-top: 5px" />
+			</section>
+
+			<button type="submit" class="btn">Wijzigingen Opslaan</button>
+		</form>
+	</section>
+
+	<script type="module" src="./js/adminEditProduct.js" defer></script>
+</body>
+
+</html>

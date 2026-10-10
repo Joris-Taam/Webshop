@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 3rem 1.5rem 4rem;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(135deg, #eef2fb, #dbe6ff);
+	color: #1a1a1a;
+	min-height: 100vh;
+}
+
+header {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 12px;
+	padding: 1.25rem 1.5rem;
+	max-width: 960px;
+	margin: 0 auto 1.5rem auto;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+	margin: 0;
+	font-size: 2.2rem;
+	letter-spacing: 0.04em;
+	color: #1f2d44;
+	font-weight: 700;
+}
+
+main {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.categorie-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 275px);
+	gap: 40px;
+	justify-content: center;
+
+	background: rgba(255, 255, 255, 0.92);
+	border-radius: 12px;
+	padding: 2.25rem 1.5rem;
+}
+
+.categorie-kaart {
+	text-align: center;
+	width: 275px;
+	cursor: pointer;
+	transition: transform 0.2s;
+	display: flex;
+	flex-direction: column;
+}
+
+.categorie-kaart:hover {
+	transform: translateY(-5px);
+}
+
+.afbeelding {
+	width: 275px !important;
+	height: 370px !important;
+	min-width: 275px;
+	max-width: 275px;
+	min-height: 370px;
+	max-height: 370px;
+
+	object-fit: cover;
+	object-position: center;
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	display: block;
+	margin-bottom: 15px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.categorie-naam {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #1f2d44;
+	text-transform: capitalize;
+	text-align: left;
+	padding-left: 2px;
+}

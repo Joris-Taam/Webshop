@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/cart.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./js/cart.js" defer></script>
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+		<title>Winkelmand</title>
+	</head>
+	<body data-api-base="http://localhost:4001/api/cart" data-user-email="test@bugwriters.com">
+		<navbar-component></navbar-component>
+
+		<header>
+			<h1>Mijn Winkelmand</h1>
+		</header>
+
+		<main>
+			<section id="cart-container" class="cart-container">
+				<p class="loading-msg">Winkelmand laden...</p>
+			</section>
+
+			<section class="cart-summary" id="cart-summary" style="display: none">
+				<div class="summary-row">
+					<span>Totaal Artikelen:</span>
+					<span id="total-items">0</span>
+				</div>
+				<div class="summary-row total">
+					<span>Totaalbedrag:</span>
+					<span id="total-price">€ 0,00</span>
+				</div>
+				<button class="btn-checkout">Afrekenen</button>
+			</section>
+		</main>
+
+		<footer-component></footer-component>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/adminEditContact.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./js/shared/sidebar.js" defer></script>
+    <title>Contactverzoek Bewerken</title>
+</head>
+
+<body>
+    <sidebar-component></sidebar-component>
+    <main>
+        <h2>Contactverzoek Bewerken</h2>
+        <form id="editContactForm">
+            <label for="naam">Naam:
+                <input type="text" id="naam" required />
+            </label>
+
+            <label for="email">Email:
+                <input type="email" id="email" required />
+            </label>
+            <label for="onderwerp">Onderwerp:
+                <input type="text" id="onderwerp" required />
+            </label>
+            <label for="bericht">Bericht:
+                <textarea id="bericht" required></textarea>
+            </label>
+            <label for="status">Status:
+                <select id="status" required>
+                    <option value="new">Nieuw</option>
+                    <option value="inProgress">In Behandeling</option>
+                    <option value="completed">Afgehandeld</option>
+                </select>
+            </label>
+            <label for="notitie">Notitie:
+                <textarea id="notitie"></textarea>
+            </label>
+            <button type="submit">Opslaan</button>
+        </form>
+
+        <!-- <button onclick="history.back()">Terug naar Overzicht</button> -->
+    </main>
+    <script type="module" src="js/adminEditContact.js"></script>
+</body>
+
+</html>

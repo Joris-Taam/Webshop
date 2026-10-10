@@ -1,0 +1,23 @@
+import type { Order } from "../types/Order.js";
+
+const API_URL = "http://localhost:4001/api/orders";
+
+export const orderService = {
+	async getOrders(): Promise<Order[]> {
+		const res = await fetch(API_URL);
+		if (!res.ok) throw new Error(`Kon bestellingen niet ophalen (${res.status}).`);
+		return (await res.json()) as Order[];
+	},
+
+	async updateStatus(userEmail: string, createdAt: string, status: string): Promise<void> {
+		const url = `${API_URL}/${encodeURIComponent(userEmail)}/${encodeURIComponent(
+			createdAt
+		)}/status`;
+		const res = await fetch(url, {
+			method: "PATCH",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ status }),
+		});
+		if (!res.ok) throw new Error(`Kon status niet bijwerken (${res.status}).`);
+	},
+};

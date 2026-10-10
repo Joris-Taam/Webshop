@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=, initial-scale=1.0" />
+		<title>Message Form</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Message Form</h1>
+			<h2>A Simple Form Exercise</h2>
+			<br />
+		</header>
+		<form action="newPage.html" method="post">
+			<section>
+				<label for="name">Name: </label>
+				<input style="margin-left: 18px" type="text" id="name" name="userName" required />
+			</section>
+			<section>
+				<label for="email">E-mail:</label>
+				<input style="margin-left: 13px" type="email" id="email" name="email" required />
+			</section>
+			<section style="margin-top: 20px">
+				<label for="message">Message:</label>
+				<textarea
+					style="vertical-align: top"
+					name="message"
+					id="message"
+					placeholder="Type your text here"
+					maxlength="60"
+					rows="5"
+					required
+				></textarea>
+			</section>
+			<br />
+			<section>
+				<input type="submit" />
+			</section>
+		</form>
+	</body>
+</html>

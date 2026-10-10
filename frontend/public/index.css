@@ -1,0 +1,104 @@
+html {
+	font-family: sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+
+	--radius: 0.4rem;
+	--background: #fcfcfc;
+	--foreground: #0a1823;
+	--primary: #0077ff;
+	--secondary: #f2d9bc;
+	--muted: #dbdee1;
+	--muted-foreground: #8f99a1;
+	--destructive: #ff4d4d;
+
+	color: var(--foreground);
+	background: var(--background);
+}
+
+body {
+	margin: 0;
+	padding: 3rem 1.5rem 4rem;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(135deg, #eef2fb, #dbe6ff);
+	color: #1a1a1a;
+	min-height: 100vh;
+}
+
+body:has(footer-component) main {
+	min-height: calc(100vh - 100px);
+}
+
+input,
+select {
+	padding: 0.5rem;
+	border: 1px solid var(--muted);
+	border-radius: var(--radius);
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+}
+
+.btn {
+	cursor: default;
+	user-select: none;
+	text-decoration: none;
+	color: var(--background);
+	font-weight: 500;
+	font-size: 0.9em;
+	border-radius: var(--radius);
+	background: var(--primary);
+	border: 0.2px var(--muted-foreground) solid;
+	padding: 8px;
+	transition: background-color 160ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover {
+		background-color: oklch(from var(--primary) l c h / calc(alpha - 0.2));
+	}
+}
+
+.secondarybtn {
+	background: var(--secondary);
+	color: var(--foreground);
+	&:hover {
+		background-color: oklch(from var(--secondary) l c h / calc(alpha - 0.2));
+	}
+}
+
+.iconbtn {
+	border: 1px solid var(--primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	padding: 2px;
+	height: 1.8rem;
+	width: 1.8rem;
+
+	&:hover {
+		background-color: oklch(from var(--primary) l c h / calc(alpha - 0.2));
+		color: white;
+	}
+}
+
+.destructivebtn {
+	border: 1px solid var(--destructive);
+	background-color: var(--destructive);
+	color: oklch(from var(--destructive) 0.2 c h);
+	&:hover {
+		background-color: oklch(from var(--destructive) l c h / calc(alpha - 0.2));
+		color: var(--background);
+	}
+}
+
+.error {
+	color: red;
+	visibility: visible;
+}
+
+.hidden {
+	visibility: hidden;
+}

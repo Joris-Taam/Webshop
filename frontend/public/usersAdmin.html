@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>User List</title>
+		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./css/usersAdmin.css" />
+		<script type="module" src="./js/shared/sidebar.js" defer></script>
+		<script type="module" src="./js/usersAdmin.js"></script>
+	</head>
+
+	<body>
+		<sidebar-component></sidebar-component>
+		<main>
+			<header>
+				<h1>User List</h1>
+			</header>
+
+			<section class="new-thread">
+				<h2>Create User</h2>
+
+				<form id="newThreadForm">
+					<input id="email" placeholder="Email" type="email" />
+					<input id="password" placeholder="Password" type="password" />
+					<input id="firstName" placeholder="First Name" type="text" />
+					<input id="lastName" placeholder="Last Name" type="text" />
+					<input id="roleTitle" placeholder="Role Title" type="text" />
+					<button class="btn" id="submitButton" type="button">Create User</button>
+				</form>
+
+				<h2>Users:</h2>
+				<button class="btn" id="loadUsersButton" type="btn">Load Users</button>
+				<pre id="output"></pre>
+			</section>
+		</main>
+	</body>
+</html>

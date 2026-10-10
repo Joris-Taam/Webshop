@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Add Promotion Product</title>
+		<link rel="stylesheet" href="css/adminAddPromotionProduct.css" />
+		<link rel="stylesheet" href="./index.css" />
+		<script type="module" src="./js/shared/sidebar.js" defer></script>
+		<script src="./js/adminAddPromotionProduct.js" type="module"></script>
+	</head>
+	<body>
+		<sidebar-component></sidebar-component>
+		<main>
+			<h2>Add Products to Promotion</h2>
+			<form id="addPromotionProductForm" class="add-promotion-product-form">
+				<label for="promotion">Select Promotion</label>
+				<select id="promotion" name="promotion" required>
+					<option value="">-- Select a promotion --</option>
+				</select>
+
+				<label for="startingDate">Starting Date</label>
+				<input type="date" id="startingDate" name="startingDate" required />
+
+				<label for="endingDate">Ending Date</label>
+				<input type="date" id="endingDate" name="endingDate" required />
+
+				<label>Select Products</label>
+				<div id="productsContainer" class="products-container"></div>
+
+				<button type="submit" class="btn">Add Products to Promotion</button>
+			</form>
+		</main>
+	</body>
+</html>

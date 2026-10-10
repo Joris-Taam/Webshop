@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Categorieën</title>
+		<link rel="stylesheet" href="css/categories.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./js/categories.js" defer></script>
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+	</head>
+	<body data-api-base="http://localhost:4001/api/categories">
+		<navbar-component></navbar-component>
+
+		<header>
+			<h1>Categorieën</h1>
+		</header>
+
+		<main>
+			<section id="categories-grid" class="categorie-grid"></section>
+		</main>
+
+		<footer-component></footer-component>
+	</body>
+</html>

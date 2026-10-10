@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+build/
+dist/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# OS and generated backup files
+.DS_Store
+Thumbs.db
+*.mwb.bak

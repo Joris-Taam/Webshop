@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./index.css" />
+	<link rel="stylesheet" href="./css/home.css" />
+	<script type="module" src="./js/index.js" defer></script>
+	<script type="module" src="./js/shared/navbar.js" defer></script>
+	<script type="module" src="./js/shared/footer.js" defer></script>
+	<script type="module" src="./js/categories.js"></script>
+	<title>Homepagina</title>
+</head>
+
+<body>
+	<navbar-component></navbar-component>
+	<main>
+		<section class="First">
+			<h2>Ready-to-print 3D models for hobbyists & pros</h2>
+			<img class="car" src="img/bmw_cover-1.webp">
+			<p>Instant download: STL, OBJ, 3MF - print at home or at Fab-lab</p>
+			<button>Browse designs</button>
+		</section>
+		<section class="sectionCategorie">
+			<h3>Categorieën</h3>
+			<button class="scroll-left">‹</button>
+
+			<div class="categories-container"></div>
+
+			<button class="scroll-right">›</button>
+			<a href="#">Zie meer</a>
+		</section>
+
+		<section class="sectionActie">
+			<h3>Acties</h3>
+			<img src="./img/25percentage.jpg" width="250px" height="250px">
+			<img src="./img/discount1.jpg" width="250px" height="250px">
+			<img src="./img/specialDiscount.jpg" width="250px" height="250px">
+			<img src="./img/discountNew.jpg" width="250px" height="250px">
+			<button class="scroll-left">‹</button>
+			<button class="scroll-right">›</button>
+
+			<!--Images will load here-->
+			<a href="https://www.google.com">Zie meer</a>
+		</section>
+	</main>
+	<footer-component></footer-component>
+</body>
+
+</html>

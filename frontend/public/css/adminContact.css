@@ -1,0 +1,23 @@
+body {
+	display: flex;
+}
+
+.admin-container {
+	margin-left: 260px;
+	padding: 20px;
+}
+
+.contact-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+.contact-table th,
+.contact-table td {
+	border: 1px solid black;
+	padding: 8px;
+}
+.contact-table th {
+	background-color: white;
+	text-align: left;
+}

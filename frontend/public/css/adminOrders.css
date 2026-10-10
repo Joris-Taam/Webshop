@@ -1,0 +1,88 @@
+body {
+	display: flex;
+	min-height: 100vh;
+}
+
+.admin-orders {
+	padding: 1rem;
+	flex-grow: 1;
+}
+
+.page-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.orders-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+	padding: 12px;
+	border-bottom: 1px solid #005fd1;
+	vertical-align: top;
+}
+ 
+.orders-table th {
+	background: #f5f5f5;
+	text-align: left;
+}
+
+.o-items {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.order-item-line {
+	font-size: 0.9rem;
+	color: var(--muted-foreground);
+}
+
+.status-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.3rem 0.6rem;
+	border-radius: var(--radius);
+	text-transform: capitalize;
+	background: var(--muted);
+	color: var(--foreground);
+	font-weight: 600;
+	min-width: 6.5rem;
+}
+
+.status-action {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.status-select {
+	min-width: 8rem;
+}
+
+.save-status-btn {
+	padding: 6px 12px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	color: white;
+	background: #0077ff;
+}
+
+.save-status-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.table-message {
+	text-align: center;
+	padding: 1rem;
+	color: var(--muted-foreground);
+}

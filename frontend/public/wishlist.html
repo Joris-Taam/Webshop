@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./css/wishlist.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/wishlist.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+		<title>Wishlist</title>
+	</head>
+	<body
+		data-user-email="test@bugwriters.com"
+		data-api-base="http://localhost:4001/api/wishlist"
+		data-share-base=""
+	>
+		<navbar-component></navbar-component>
+
+		<main>
+			<header class="wishlist-header">
+				<div class="wishlist-branding">
+					<p class="wishlist-headline" id="wishlist-title">Mijn verlanglijst</p>
+				</div>
+				<button id="share-wishlist" class="share-btn" type="button">Delen</button>
+			</header>
+
+			<p id="wishlist-error" class="error-message" role="alert" hidden></p>
+			<p id="wishlist-empty" class="empty-state" role="status">Je wishlist is nog leeg.</p>
+			<div class="wishlist-grid" aria-live="polite"></div>
+		</main>
+
+		<div id="share-overlay" class="share-overlay" hidden></div>
+		<section id="share-modal" class="share-modal" role="dialog" aria-modal="true" hidden>
+			<header class="share-modal__header">
+				<h2>Delen</h2>
+				<button
+					class="share-modal__close"
+					type="button"
+					data-close-share
+					aria-label="Sluit het deelvenster"
+				>
+					&times;
+				</button>
+			</header>
+			<p class="share-modal__description">Deel jouw wishlist via de link hieronder.</p>
+			<div class="share-modal__link">
+				<input id="share-link" type="text" readonly />
+				<button id="copy-share-link" type="button">Kopieer</button>
+			</div>
+			<button class="share-modal__dismiss" type="button" data-close-share>Sluiten</button>
+		</section>
+		<footer-component></footer-component>
+	</body>
+</html>

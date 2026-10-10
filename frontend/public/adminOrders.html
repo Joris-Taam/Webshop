@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin - Bestellingen</title>
+		<script type="module" src="./js/shared/sidebar.js" defer></script>
+		<link rel="stylesheet" href="./css/adminOrders.css" />
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<sidebar-component></sidebar-component>
+		<main class="admin-orders">
+			<header class="page-header">
+				<h2>Bestellingen</h2>
+				<button id="refreshOrders" class="btn secondarybtn" type="button">Vernieuwen</button>
+			</header>
+
+			<table class="orders-table">
+				<thead>
+					<tr>
+						<th>Email</th>
+						<th>Datum</th>
+						<th>Totaal</th>
+						<th>Status</th>
+						<th>Items</th>
+						<th>Acties</th>
+					</tr>
+				</thead>
+				<tbody id="ordersTableBody"></tbody>
+			</table>
+
+			<template id="orderRowTemplate">
+				<tr>
+					<td class="o-email"></td>
+					<td class="o-date"></td>
+					<td class="o-total"></td>
+					<td><span class="status-badge"></span></td>
+					<td class="o-items"></td>
+					<td class="actions">
+						<div class="status-action">
+							<select class="status-select"></select>
+							<button class="save-status-btn" type="button">Opslaan</button>
+						</div>
+					</td>
+				</tr>
+			</template>
+		</main>
+
+		<script type="module" src="./js/adminOrders.js" defer></script>
+	</body>
+</html>

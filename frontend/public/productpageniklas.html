@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>3W Productpagina</title>
+		<link rel="stylesheet" href="./css/productpageniklas.css" />
+	</head>
+
+	<body data-user-email="test@bugwriters.com" data-api-base="http://localhost:4001/api/wishlist">
+		<navbar-component></navbar-component>
+		<section class="product-banner">
+			<h1>Product pagina</h1>
+			<button class="product-banner__cta" type="button">Verder winkelen</button>
+		</section>
+		<main class="product-shell">
+			<button class="product-close" type="button" aria-label="Sluiten">&times;</button>
+			<section class="product-card">
+				<div class="product-visual">
+					<img src="" alt="" id="product-hero" loading="lazy" />
+				</div>
+
+				<div class="product-details">
+					<h1 id="product-name">Product naam</h1>
+					<p class="product-price" id="product-price"></p>
+					<dl class="product-meta">
+						<div>
+							<dt>categorie</dt>
+							<dd id="product-category"></dd>
+						</div>
+						<div>
+							<dt>grootte</dt>
+							<dd id="product-size"></dd>
+						</div>
+					</dl>
+					<p id="product-description" class="product-description"></p>
+
+					<div class="product-actions">
+						<button id="wishlist-button" class="wishlist-btn">Toevoegen aan verlanglijst</button>
+						<button class="cart-btn">Winkelmand</button>
+						<p id="wishlist-feedback" class="feedback" hidden></p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/productpageniklas.js"></script>
+	</body>
+</html>

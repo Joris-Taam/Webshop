@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./css/adminContact.css" />
+		<link rel="stylesheet" href="./index.css" />
+		<script src="./js/shared/sidebar.js" defer></script>
+		<script type="module" src="js/adminContactRequest.js" defer></script>
+		<title>Contactverzoeken Overzicht</title>
+	</head>
+	<body>
+		<sidebar-component></sidebar-component>
+		<main>
+			<section class="admin-container">
+				<table class="contact-table">
+					<thead>
+						<tr>
+							<th>Naam</th>
+							<th>Email</th>
+							<th>Onderwerp</th>
+							<th>Bericht</th>
+							<th>Status</th>
+							<th>Datum</th>
+							<th>Acties</th>
+						</tr>
+					</thead>
+					<tbody id="contactTableBody">
+						<!--Contact requests will be loaded here-->
+					</tbody>
+				</table>
+			</section>
+			<template id="contactRowTemplate">
+				<tr>
+					<td class="c-name"></td>
+					<td class="c-email"></td>
+					<td class="c-subject"></td>
+					<td class="c-message"></td>
+					<td class="c-status"></td>
+					<td class="c-date"></td>
+					<td class="actions">
+						<button class="btn update-button">Bijwerk</button>
+						<button class="btn destructivebtn delete-button">Verwijder</button>
+					</td>
+				</tr>
+			</template>
+		</main>
+	</body>
+</html>

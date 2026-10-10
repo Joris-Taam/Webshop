@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Producten</title>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="css/products.css" />
+		<script type="module" src="./js/products.js" defer></script>
+		<script type="module" src="./js/shared/navbar.js" defer></script>
+		<script type="module" src="./js/shared/footer.js" defer></script>
+	</head>
+	<body data-api-base="http://localhost:4001/api/products">
+		<navbar-component></navbar-component>
+
+		<header>
+			<h1 id="page-title">Producten</h1>
+		</header>
+
+		<main>
+			<section id="products-grid" class="product-grid"></section>
+		</main>
+
+		<footer-component></footer-component>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Product Overzicht</title>
+	<link rel="stylesheet" href="./index.css" />
+	<link rel="stylesheet" href="./css/AdminProductOverview.css" />
+	<script type="module" src="./js/shared/sidebar.js" defer></script>
+</head>
+
+<body>
+	<sidebar-component></sidebar-component>
+	<main>
+		<h2 class="section-title">Product Overzicht</h2>
+
+		<table class="product-table">
+			<thead>
+				<tr>
+					<th>Naam</th>
+					<th>Prijs (€)</th>
+					<th>Categorie</th>
+					<th>Beschrijving</th>
+					<th>Acties</th>
+				</tr>
+			</thead>
+			<tbody id="productTableBody"></tbody>
+		</table>
+	</section>
+	<template id="productRowTemplate">
+		<tr>
+			<td class="p-name"></td>
+			<td class="p-price"></td>
+			<td class="p-category"></td>
+			<td class="p-description"></td>
+
+			<td class="actions">
+				<button class="edit-btn">Bewerken</button>
+				<button class="delete-btn">Verwijderen</button>
+			</td>
+		</tr>
+	</template>
+</main>
+	<script type="module" src="./js/adminProductOverview.js" defer></script>
+</body>
+
+</html>

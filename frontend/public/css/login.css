@@ -1,0 +1,64 @@
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 7rem 6rem;
+}
+.logo {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	height: 50px;
+	width: auto;
+}
+body {
+	background-color: #016fb9;
+}
+.blue {
+	background-color: #016fb9;
+	color: white;
+}
+.container {
+	background: white;
+	border: 1px solid black;
+	min-height: 500px;
+	padding: 3rem 5rem;
+}
+.email {
+	margin-top: 25px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.password {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+input {
+	display: block;
+	margin-bottom: 20px;
+	padding: 8px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.buttons {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-top: 20px;
+}
+.register {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.forgotPassword {
+	display: flex;
+	justify-content: end;
+	border-top: 1px solid black;
+}
+input[type="button"] {
+	width: 150px;
+	height: 40px;
+}
